@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3ccccb4;
+}
+
+.header-one, .header-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; /* General padding for headers */
+    border-bottom: 0px solid #000000;
+    position: relative;
+}
+
+.header-one {
+    background-color: #fff;
+    padding: 14px 0; /* Increase the height by adding more padding */
+}
+
+.header-two {
+    background-color: #000;
+    padding: 10px 0; /* Decrease the height by reducing padding */
+}
+
+.header-one .logo, .header-two .logo {
+    position: absolute;
+    left: 20px;
+}
+
+.header-one .logo img, .header-two .logo img {
+    height: 40px; /* Adjust the height of the logo as needed */
+}
+
+.header-one nav ul, .header-two nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 70px;
+}
+
+.header-one nav a, .header-two nav a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    font-weight: bold;
+    padding-bottom: 5px; /* Add padding to make space for the underline */
+}
+
+.header-two nav a {
+    color: #fff;
+    font-size: 0.9em; /* Reduce the font size for the second header */
+}
+
+.header-one nav a::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.header-two nav a::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.header-one nav a:hover::after, .header-two nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-articles {
+    flex: 3;
+    display: flex;
+    gap: 20px;
+}
+
+.main-articles article {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    flex: 1; /* Allow articles to take equal space */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.main-articles img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.editor-picks {
+    flex: 1;
+}
+
+.editor-picks h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.editor-picks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.editor-picks li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.editor-picks a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
